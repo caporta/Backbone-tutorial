@@ -44,6 +44,24 @@
       }
     });
 
+    /* COLLECTIONS
+    ================*/
+    app.TodoList = Backbone.Collection.extend({
+      model: app.Todo,
+      localStorage: new Store("backbone-todo")
+    });
+
+    app.todoList = new app.TodoList();
+
+                /*
+                     app.todoList.create({title: "Learn Backbone's Collections"}); // will set 'completed' to 'false' by default
+                     var lmodel = new app.Todo({title: "Learn Backbone's Models", completed: true});
+                     todoList.add(lmodel);
+                     todoList.pluck('title');
+                     todoList.pluck('completed');
+                     JSON.stringify(todoList);
+                */
+
   </script>
 
 </body>
